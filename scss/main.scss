@@ -1,0 +1,101 @@
+$primary: #07232c;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "montserrat";
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $primary;
+  flex-direction: column;
+  position: relative;
+
+  h1 {
+    color: white;
+    font-size: 3rem;
+    font-weight: 600;
+  }
+
+  p {
+    margin-top: 1rem;
+    color: white;
+  }
+
+  svg {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+
+  h2 {
+    text-align: center;
+    padding-top: 3.5rem;
+    font-weight: 600;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+  }
+}
+
+.cards {
+  width: 100%;
+  margin-top: 5rem;
+  // background-color: rgba($color: $primary, $alpha: 0.3);
+  display: flex;
+  // flex-wrap: nowrap;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+
+.card {
+  padding: 1.5rem 3.5rem;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 6px 6px 20px rgba($color: #000000, $alpha: 0.16);
+  text-align: center;
+
+  &__title {
+    font-weight: 700;
+
+    span {
+      font-weight: 600;
+      color: darken($color: yellow, $amount: 18);
+    }
+  }
+
+  &__action {
+    margin-top: 1rem;
+
+    a {
+      padding: 0.5rem 1.5rem;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      transition: 0.5s ease-in;
+      background-color: $primary;
+
+      &:hover {
+        background-color: lighten($color: $primary, $amount: 5);
+      }
+    }
+  }
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 1rem;
+}
