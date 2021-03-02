@@ -1,4 +1,12 @@
 $primary: #07232c;
+$responsive: 1000px;
+
+@mixin res {
+  @media (max-width: #{$responsive}) {
+    @content;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +14,7 @@ $primary: #07232c;
 }
 
 body {
-  font-family: "montserrat";
+  font-family: "Montserrat", sans-serif;
 }
 
 header {
@@ -23,11 +31,20 @@ header {
     color: white;
     font-size: 3rem;
     font-weight: 600;
+
+    @include res() {
+      font-size: 1.5rem;
+    }
   }
 
   p {
     margin-top: 1rem;
     color: white;
+
+    @include res() {
+      font-size: 0.8rem;
+      margin-top: 0.5rem;
+    }
   }
 
   svg {
@@ -52,14 +69,17 @@ section {
 .cards {
   width: 100%;
   margin-top: 5rem;
-  // background-color: rgba($color: $primary, $alpha: 0.3);
   display: flex;
-  // flex-wrap: nowrap;
   justify-content: space-evenly;
   padding: 1rem;
+
+  @include res() {
+    flex-direction: column;
+  }
 }
 
 .card {
+  margin: 2rem;
   padding: 1.5rem 3.5rem;
   border-radius: 10px;
   overflow: hidden;
@@ -97,5 +117,27 @@ section {
 
 footer {
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+
+  @include res() {
+    margin: 10rem 0 1rem;
+  }
+
+  p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+
+    span {
+      color: red;
+    }
+    a {
+      text-decoration: none;
+      color: $primary;
+      transition: 0.5s ease-in-out;
+
+      &:hover {
+        font-weight: 600;
+      }
+    }
+  }
 }
