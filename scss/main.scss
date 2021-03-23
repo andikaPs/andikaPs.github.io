@@ -72,6 +72,7 @@ section {
   display: flex;
   justify-content: space-evenly;
   padding: 1rem;
+  flex-wrap: wrap;
 
   @include res() {
     flex-direction: column;

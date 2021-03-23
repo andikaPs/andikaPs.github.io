@@ -67,6 +67,7 @@ section h2 {
   display: flex;
   justify-content: space-evenly;
   padding: 1rem;
+  flex-wrap: wrap;
 }
 
 @media (max-width: 1000px) {
