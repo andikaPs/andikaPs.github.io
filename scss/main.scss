@@ -1,145 +1,233 @@
-$primary: #07232c;
+// ============ Colors ============
+$primary: #fca311;
+$dark: #14213d;
+$light: #e5e5e5;
 
-$responsive: 1000px;
-
-@mixin res {
-  @media (max-width: #{$responsive}) {
-    @content;
-  }
+// ============ mixin ============
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+@mixin flex-colum-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-colum {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+// ============ format ============
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Montserrat", sans-serif;
+html {
+  scroll-behavior: smooth;
 }
 
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $dark;
+  border-radius: 5px;
+}
+
+// ============ styling header ============
 header {
   width: 100%;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: $primary;
-  flex-direction: column;
+  @include flex-center();
+  overflow: hidden;
   position: relative;
 
-  h1 {
-    color: white;
-    font-size: 3rem;
-    font-weight: 600;
-
-    @include res() {
-      font-size: 1.5rem;
-    }
-  }
-
-  p {
-    margin-top: 1rem;
-    color: white;
-
-    @include res() {
-      font-size: 0.8rem;
-      margin-top: 0.5rem;
-    }
-  }
-
-  svg {
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100vh;
     position: absolute;
-    bottom: 0;
+    z-index: -2;
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    opacity: 0.2;
   }
-}
 
-section {
-  width: 100%;
-  height: 100vh;
-
-  h2 {
-    text-align: center;
-    padding-top: 3.5rem;
-    font-weight: 600;
-    letter-spacing: 5px;
-    text-transform: uppercase;
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 95%);
   }
-}
 
-.cards {
-  width: 100%;
-  margin-top: 5rem;
-  display: flex;
-  justify-content: space-evenly;
-  padding: 1rem;
-  flex-wrap: wrap;
-
-  @include res() {
-    flex-direction: column;
+  .scroll {
+    color: $primary;
+    position: absolute;
+    bottom: 2rem;
+    animation: upDown 3.5s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
   }
 }
 
 .card {
-  margin: 2rem;
-  padding: 1.5rem 3.5rem;
+  width: 22rem;
   border-radius: 10px;
+  box-shadow: 10px 16px 33px rgba($color: #000000, $alpha: 0.2);
   overflow: hidden;
-  box-shadow: 6px 6px 20px rgba($color: #000000, $alpha: 0.16);
-  text-align: center;
+  background-color: white;
+  padding: 3rem;
+  @include flex-colum-center();
+  animation: upDown 3s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
 
-  &__title {
-    font-weight: 700;
+  &__image {
+    width: 7.5rem;
+    height: 7.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    background-size: cover;
+    box-shadow: 10px 16px 33px rgba($color: #000000, $alpha: 0.12);
 
-    span {
-      font-weight: 600;
-      color: darken($color: yellow, $amount: 18);
+    img {
+      width: 100%;
     }
   }
 
-  &__action {
-    margin-top: 1rem;
+  &__desc {
+    text-align: center;
+    width: 100%;
+    @include flex-colum-center();
+    margin: 1rem 0 3rem;
 
-    a {
-      padding: 0.5rem 1.5rem;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      transition: 0.5s ease-in;
-      background-color: $primary;
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: $primary;
+      letter-spacing: 0.1rem;
+    }
+    p {
+      font-weight: 300;
+      color: $dark;
+    }
+  }
+
+  &__sci {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    .circle-sci {
+      width: 50px;
+      height: 50px;
+      display: grid;
+      place-content: center;
+      overflow: hidden;
+      border-radius: 50%;
+      border: 1px solid $primary;
+      position: relative;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        position: absolute;
+        background-color: lighten($color: $light, $amount: 5);
+        z-index: -1;
+        transform: translateY(-20rem);
+        transition: all 0.5s ease-out;
+      }
 
       &:hover {
-        background-color: lighten($color: $primary, $amount: 5);
+        &::after {
+          transform: translateY(0);
+          // transition: all 0.3s ease-in;
+        }
       }
     }
   }
 }
 
-footer {
-  text-align: center;
-  margin-bottom: 2rem;
+// ============ styling about me ============
+main {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
 
-  @include res() {
-    margin: 20rem 0 1rem;
+.about {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  color: $light;
+  @include flex-colum();
+  padding: 0 5rem;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -2;
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    opacity: 0.8;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: rgba($color: $primary, $alpha: 0.9);
+    z-index: -1;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 2.3rem;
+    margin-bottom: 2rem;
   }
 
   p {
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
+    font-weight: 300;
+    font-size: 1.75rem;
+  }
+}
 
-    span {
-      color: red;
-    }
-    a {
-      text-decoration: none;
-      color: $primary;
-      transition: 0.5s ease-in-out;
+@keyframes upDown {
+  0% {
+    transform: translateY(0);
+  }
 
-      &:hover {
-        font-weight: 600;
-      }
-    }
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 }
