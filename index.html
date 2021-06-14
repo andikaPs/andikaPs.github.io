@@ -12,13 +12,13 @@
   </head>
   <body>
     <header>
-      <div class="card">
-        <div class="card__image" style="background-image: url(../assets/img/me.jpg)"></div>
-        <div class="card__desc">
+      <div class="card-profile">
+        <div class="card-profile__image" style="background-image: url(../assets/img/me.jpg)"></div>
+        <div class="card-profile__desc">
           <h3>Andika Permana Sidiq</h3>
           <p>Calon Web Developer</p>
         </div>
-        <div class="card__sci">
+        <div class="card-profile__sci">
           <!-- github -->
           <a href="https://github.com/andikaPs" target="_blank" class="circle-sci">
             <svg width="21.713" height="23.049" viewBox="0 0 21.713 23.049">
@@ -98,10 +98,238 @@
           <p>Hai.. Saya Andika Permana Sidiq, saya adalah seorang calon web developer aamiin...</p>
         </div>
       </section>
+
       <section class="skills">
-        <h2>Skill</h2>
-        <div class="front-end"></div>
+        <h2>Skills</h2>
+
+        <div class="skills__list">
+          <div class="front-end">
+            <h3>Front-end</h3>
+            <div class="front-end__list">
+              <ul>
+                <li>
+                  <p>HTML</p>
+                  <svg width="22.55" height="26.308" viewBox="0 0 22.55 26.308">
+                    <path
+                      id="html5"
+                      d="M0,32,2.049,55.243l9.2,3.065L20.5,55.243,22.55,32Zm18.1,7.511H7.305l.241,2.9H17.858l-.8,8.715L11.31,52.712v.018h-.065l-5.8-1.6L5.1,46.675H7.9L8.1,48.912l3.142.851,3.153-.851.352-3.653H4.95L4.2,36.71H18.357Z"
+                      transform="translate(0 -32)"
+                      fill="#fca311"
+                    />
+                  </svg>
+                </li>
+
+                <li>
+                  <p>CSS</p>
+                  <svg width="22.61" height="26.379" viewBox="0 0 22.61 26.379">
+                    <path
+                      id="css3"
+                      d="M0,32,2.055,55.305l9.25,3.074,9.25-3.074L22.61,32Zm18.436,4.711L18.153,39.5l-6.789,2.9-.018.006h6.565l-.754,8.632-5.782,1.69L5.558,51.007l-.377-4.351H8.061l.188,2.255,3.1.783,3.221-.907.218-3.627-9.792-.029v-.006l-.012.006L4.769,42.4l6.6-2.75.383-.159H4.516l-.342-2.785Z"
+                      transform="translate(0 -32)"
+                      fill="#be4bdb"
+                    />
+                  </svg>
+                </li>
+
+                <li>
+                  <p>Javascript</p>
+                  <svg width="22.61" height="22.61" viewBox="0 0 22.61 22.61">
+                    <path
+                      id="js"
+                      d="M0,32V54.61H22.61V32ZM12.3,49.634a2.889,2.889,0,0,1-3.175,3.2A3.3,3.3,0,0,1,5.94,50.9l1.731-1.045c.333.59.636,1.09,1.368,1.09.7,0,1.141-.273,1.141-1.337V42.382H12.3v7.253Zm5.027,3.2a4.078,4.078,0,0,1-3.871-2.17l1.731-1a2.319,2.319,0,0,0,2.094,1.292c.878,0,1.443-.439,1.443-1.05,0-.727-.575-.984-1.549-1.413l-.53-.227c-1.534-.651-2.549-1.474-2.549-3.2a2.838,2.838,0,0,1,3.109-2.806,3.129,3.129,0,0,1,3.018,1.7l-1.655,1.06a1.445,1.445,0,0,0-1.368-.908.922.922,0,0,0-1.014.908c0,.636.394.893,1.307,1.292l.53.227c1.807.772,2.821,1.565,2.821,3.341,0,1.908-1.5,2.958-3.518,2.958Z"
+                      transform="translate(0 -32)"
+                      fill="#fca311"
+                    />
+                  </svg>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="back-end">
+            <h3>Back-end</h3>
+            <div class="back-end__list">
+              <ul>
+                <li>
+                  <p>PHP | Codeigniter 3</p>
+                  <svg width="45" height="23.667" viewBox="0 0 45 23.667">
+                    <path
+                      id="php-brands"
+                      d="M22.5,88.881c12.052,0,21.319,5.077,21.319,10.652S34.545,110.186,22.5,110.186,1.181,105.109,1.181,99.534,10.455,88.881,22.5,88.881m0-1.181C10.076,87.7,0,92.995,0,99.534s10.076,11.834,22.5,11.834S45,106.073,45,99.534,34.924,87.7,22.5,87.7ZM15.342,98.584c-.555,2.848-2.517,2.552-4.929,2.552l.963-4.964C14.048,96.173,15.863,95.884,15.342,98.584Zm-8.494,7.58h2.58l.612-3.15c2.89,0,4.683.211,6.342-1.343,1.835-1.688,2.313-4.69,1.005-6.195a4.115,4.115,0,0,0-3.27-1.174H9.148ZM19.905,91.145h2.566L21.86,94.3c2.215,0,4.268-.162,5.259.752,1.041.956.541,2.18-.584,7.952h-2.6c1.083-5.583,1.287-6.047.893-6.469s-1.245-.323-3.333-.323L20.173,103H17.606l2.3-11.855Zm15.6,7.439c-.562,2.89-2.58,2.552-4.929,2.552l.963-4.964C34.228,96.173,36.028,95.884,35.508,98.584Zm-8.494,7.58H29.6l.612-3.15c3.038,0,4.718.176,6.342-1.343,1.835-1.688,2.313-4.69,1.005-6.195a4.115,4.115,0,0,0-3.27-1.174H29.32Z"
+                      transform="translate(0 -87.7)"
+                      fill="#be4bdb"
+                    />
+                  </svg>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
+
+    <main>
+      <section class="workedc-title">
+        <div class="box">
+          <h2>
+            Work Experience & <br />
+            <span>Education</span>
+          </h2>
+        </div>
+      </section>
+
+      <section class="workedc-desc">
+        <div class="workex">
+          <h2>Work Experience</h2>
+          <ul>
+            <li>
+              <div class="thn">
+                <span>2018</span>
+              </div>
+              <div class="desc">
+                <p>Pengadilan Negeri Subang</p>
+                <p>Praktek Kerja Lapangan</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="edc">
+          <h2>Education</h2>
+          <ul>
+            <li>
+              <div class="thn">
+                <span>2019 - now</span>
+              </div>
+              <div class="desc">
+                <p>Universitas Bina Sarana Informatika</p>
+                <p>D3 | Sistem Informasi</p>
+              </div>
+            </li>
+
+            <li>
+              <div class="thn">
+                <span>2016 - 2019</span>
+              </div>
+              <div class="desc">
+                <p>SMK Pasundan Subang</p>
+                <p>Rekayasa Perangkat Lunak</p>
+              </div>
+            </li>
+
+            <li>
+              <div class="thn">
+                <span>2013 - 2016</span>
+              </div>
+              <div class="desc">
+                <p>SMP Negeri 2 Gantar</p>
+              </div>
+            </li>
+
+            <li>
+              <div class="thn">
+                <span>2007 - 2013</span>
+              </div>
+              <div class="desc">
+                <p>SDN Walahar</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <section class="projects">
+      <h2>Projects</h2>
+
+      <div class="cards">
+        <div class="card">
+          <div class="card__label">Web UI</div>
+
+          <div class="card__desc">
+            <h3>Favorite Recipe</h3>
+            <p>HTML + CSS + JAVASCRIPT</p>
+          </div>
+
+          <div class="card__button">
+            <a href="https://andikaps.github.io/favorite-recipes/" target="_blank" class="btn btn-dark">Demo</a>
+            <a href="" class="btn btn-link">View on Github</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__label">Card</div>
+
+          <div class="card__desc">
+            <h3>Travel UI</h3>
+            <p>HTML + CSS + JAVASCRIPT</p>
+          </div>
+
+          <div class="card__button">
+            <a href="https://andikaps.github.io/travel-ui/" target="_blank" class="btn btn-dark">Demo</a>
+            <a href="" class="btn btn-link">View on Github</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__label">Web UI</div>
+
+          <div class="card__desc">
+            <h3>Simple E-Commerce</h3>
+            <p>HTML + Bootstrap + JQuery</p>
+          </div>
+
+          <div class="card__button">
+            <a href="https://andikaps.github.io/btis-ui/" target="_blank" class="btn btn-dark">Demo</a>
+            <a href="" class="btn btn-link">View on Github</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__label">Web UI</div>
+
+          <div class="card__desc">
+            <h3>Online Test</h3>
+            <p>HTML + Tailwind + JQuery</p>
+          </div>
+
+          <div class="card__button">
+            <a href="https://andikaps.github.io/online-test" target="_blank" class="btn btn-warning" disabled>On Process</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__label">Web UI</div>
+
+          <div class="card__desc">
+            <h3>E-Library</h3>
+            <p>HTML + Tailwind + JQuery</p>
+          </div>
+
+          <div class="card__button">
+            <a href="https://andikaps.github.io/e-library/" target="_blank" class="btn btn-dark">Demo</a>
+            <a href="" class="btn btn-link">View on Github</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card__label">App</div>
+
+          <div class="card__desc">
+            <h3>E-Library</h3>
+            <p>HTML + Tailwind + JQuery + Codeigniter 3</p>
+          </div>
+
+          <div class="card__button">
+            <a href="https://youtu.be/dg4o9Bctk24" target="_blank" class="btn btn-dark">Demo</a>
+            <a href="" class="btn btn-link">View on Github</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>dIkaps | 2021</span>
+    </footer>
   </body>
 </html>
