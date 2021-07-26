@@ -253,7 +253,7 @@
 
           <div class="card__button">
             <a href="https://andikaps.github.io/favorite-recipes/" target="_blank" class="btn btn-dark">Demo</a>
-            <a href="" class="btn btn-link">View on Github</a>
+            <a href="https://github.com/andikaPs/favorite-recipes/tree/gh-pages" class="btn btn-link">View on Github</a>
           </div>
         </div>
 
@@ -267,7 +267,7 @@
 
           <div class="card__button">
             <a href="https://andikaps.github.io/travel-ui/" target="_blank" class="btn btn-dark">Demo</a>
-            <a href="" class="btn btn-link">View on Github</a>
+            <a href="https://github.com/andikaPs/travel-ui/tree/gh-pages" class="btn btn-link">View on Github</a>
           </div>
         </div>
 
@@ -281,7 +281,7 @@
 
           <div class="card__button">
             <a href="https://andikaps.github.io/btis-ui/" target="_blank" class="btn btn-dark">Demo</a>
-            <a href="" class="btn btn-link">View on Github</a>
+            <a href="https://github.com/andikaPs/btis-ui/tree/gh-pages" class="btn btn-link">View on Github</a>
           </div>
         </div>
 
@@ -308,7 +308,7 @@
 
           <div class="card__button">
             <a href="https://andikaps.github.io/e-library/" target="_blank" class="btn btn-dark">Demo</a>
-            <a href="" class="btn btn-link">View on Github</a>
+            <a href="https://github.com/andikaPs/e-library/tree/gh-pages" class="btn btn-link">View on Github</a>
           </div>
         </div>
 
@@ -322,14 +322,19 @@
 
           <div class="card__button">
             <a href="https://youtu.be/dg4o9Bctk24" target="_blank" class="btn btn-dark">Demo</a>
-            <a href="" class="btn btn-link">View on Github</a>
+            <a href="https://github.com/andikaPs/e-library-app" class="btn btn-link">View on Github</a>
           </div>
         </div>
       </div>
     </section>
 
     <footer>
-      <span>dIkaps | 2021</span>
+      <span>dIkaps | <span id="year"></span></span>
     </footer>
+
+    <script>
+      let date = new Date();
+      document.querySelector("#year").innerHTML = date.getFullYear();
+    </script>
   </body>
 </html>
