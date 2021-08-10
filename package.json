@@ -1,0 +1,24 @@
+{
+  "name": "dikaps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "postcss ./src/css/style.css -o public/css/tailwind.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andikaPs/dIkaps.git"
+  },
+  "author": "dIkaps",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andikaPs/dIkaps/issues"
+  },
+  "homepage": "https://github.com/andikaPs/dIkaps#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.3.1",
+    "postcss": "^8.3.6",
+    "tailwindcss": "^2.2.7"
+  }
+}
