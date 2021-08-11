@@ -7,7 +7,7 @@
 @layer base {
   body {
     font-family: "Montserrat", sans-serif;
-    @apply bg-light tracking-wide;
+    @apply bg-light dark:bg-dark tracking-wider text-title-light;
   }
 
   h1 {
@@ -49,5 +49,9 @@
 
   .circle-sci {
     @apply w-14 h-14 bg-white rounded-full flex-center shadow-lg hover:animate-bounce md:bg-transparent md:shadow-none;
+  }
+
+  .card-skill {
+    @apply bg-white p-6 w-full flex-center shadow-lg rounded-md hover:shadow-xl;
   }
 }

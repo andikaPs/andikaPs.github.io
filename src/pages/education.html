@@ -1,0 +1,97 @@
+<div class="my-24 lg:mt-32 lg:mb-10">
+  <h1>Education</h1>
+
+  <!-- cards -->
+  <div class="w-full mt-10 cards md:flex md:flex-wrap md:justify-around lg:items-center lg:justify-between lg:flex-nowrap">
+    <!-- card -->
+  </div>
+</div>
+
+<div>
+  <h1>Education Certificate</h1>
+
+  <!-- cards -->
+  <div class="w-full mt-10 edc md:flex md:flex-wrap md:justify-around lg:flex-nowrap lg:items-center lg:justify-between">
+    <!-- card -->
+  </div>
+</div>
+
+<script>
+  const educations = [
+    {
+      nama: "Universitas Bina Sarana Informatika",
+      jurusan: "D3 | Sistem Informasi",
+      tahun: "2019 - Now",
+    },
+    {
+      nama: "SMK Pasundan Subang",
+      jurusan: "Rekayasa Perangkat Lunak",
+      tahun: "2016 - 2019",
+    },
+    {
+      nama: "SMP Negeri 2 Gantar",
+      jurusan: "&nbsp",
+      tahun: "2013 - 2016",
+    },
+    {
+      nama: "SD Negeri Walahar",
+      jurusan: "&nbsp",
+      tahun: "2007 - 2013",
+    },
+  ];
+  let output = "";
+  const cards = document.querySelector(".cards");
+  for (const education of educations) {
+    output += `
+              <div class="bg-white px-6 py-4 rounded-lg shadow-lg hover:shadow-xl mb-5 md:w-5/12 md:mr-3 lg:w-3/12 lg:mr-5 lg:px-4 lg:text-xs">
+                <div class="mb-7"><h3 class="font-semibold mb-2">
+                    <h3 class="font-semibold mb-2">${education.nama}</h3>
+                    <p class="text-sm lg:text-xs">${education.jurusan}</p>
+                </div>
+                <p class="font-semibold">${education.tahun}</p>
+              </div>
+          `;
+    cards.innerHTML = output;
+  }
+
+  // education ceritificate
+  const edc = document.querySelector(".edc");
+  const certificates = [
+    {
+      image: "./dist/img/certificate/javascript.png",
+      name: "Fundamental Javascript",
+      organizer: "Progate",
+    },
+    {
+      image: "./dist/img/certificate/sql.png",
+      name: "Fundamental SQL",
+      organizer: "Progate",
+    },
+    {
+      image: "./dist/img/certificate/sass.png",
+      name: "Kursus Sass",
+      organizer: "Progate",
+    },
+    {
+      image: "./dist/img/certificate/git.png",
+      name: "Kursus Git",
+      organizer: "Progate",
+    },
+  ];
+
+  let result = "";
+  for (const certificate of certificates) {
+    result += `
+          <div class="bg-white px-6 py-4 rounded-lg shadow-lg hover:shadow-xl mb-5 relative overflow-hidden md:w-5/12 lg:w-3/12 lg:mr-5">
+            <div class="w-full bg-gray-300 h-44 absolute top-0 left-0">
+              <img src="${certificate.image}" class="w-full h-full object-cover" alt="${certificate.name}" loading="lazy" />
+            </div>
+            <div class="mt-44">
+              <h3 class="font-semibold mb-2">${certificate.name}</h3>
+              <p class="text-sm">${certificate.organizer}</p>
+            </div>
+          </div>
+        `;
+    edc.innerHTML = result;
+  }
+</script>
