@@ -22,6 +22,9 @@ module.exports = {
         },
         icons: "#C5C8D4",
       },
+      fontSize: {
+        xxs: "10px",
+      },
     },
   },
   variants: {
