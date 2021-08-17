@@ -1,5 +1,6 @@
 module.exports = {
-  purge: [],
+  mode: "jit",
+  purge: ["./index.html", "./src/**/*.html"],
   darkMode: "class", // or 'media' or 'class'
   theme: {
     extend: {
@@ -28,11 +29,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {
-      animation: ["hover", "group-hover"],
-      display: ["group-hover"],
-      transform: ["group-hover"],
-    },
+    animation: ["hover", "group-hover"],
+    display: ["group-hover"],
+    transform: ["group-hover"],
   },
   plugins: [],
 };

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "postcss ./src/css/style.css -o public/css/tailwind.css"
+    "build": "postcss ./src/css/style.css -o ./dist/css/tailwind.css -w",
+    "prod": "NODE_ENV=production postcss ./src/css/style.css -o ./dist/css/tailwind.css --minify"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,10 @@
     "autoprefixer": "^10.3.1",
     "postcss": "^8.3.6",
     "tailwindcss": "^2.2.7"
+  },
+  "dependencies": {
+    "cssnano": "^5.0.7",
+    "postcss-cli": "^8.3.1",
+    "win-node-env": "^0.4.0"
   }
 }

@@ -32,15 +32,23 @@
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
+
+  label {
+    @apply font-semibold;
+  }
 }
 
 @layer components {
   .nav-item {
-    @apply flex flex-col items-center font-medium;
+    @apply flex flex-col items-center font-medium hover:text-active-light dark:hover:text-active-dark text-icons;
+  }
+
+  .active-nav {
+    @apply text-active-light dark:text-active-dark;
   }
 
   .btn {
-    @apply px-4 py-2.5 text-sm focus:ring-4 text-light rounded-lg shadow-lg transition-colors;
+    @apply px-4 py-2.5 text-sm focus:ring-4 text-light rounded-lg shadow-lg transition-colors outline-none;
   }
 
   .flex-center {
@@ -48,10 +56,18 @@
   }
 
   .circle-sci {
-    @apply w-14 h-14 bg-white rounded-full flex-center shadow-lg hover:animate-bounce md:bg-transparent md:shadow-none;
+    @apply w-14 h-14 bg-white rounded-full flex-center shadow-lg hover:animate-bounce md:bg-transparent md:shadow-none dark:bg-active-dark lg:dark:bg-transparent;
   }
 
   .card-skill {
-    @apply bg-white p-6 w-full flex-center shadow-lg rounded-md hover:shadow-xl;
+    @apply bg-white p-6 w-full flex-center shadow-lg rounded-md hover:shadow-xl dark:bg-active-dark;
+  }
+
+  .input {
+    @apply w-full px-5 py-2.5 bg-transparent outline-none border-2 border-title-light dark:border-light rounded-lg focus:ring-4 ring-title-light ring-opacity-20 dark:text-light;
+  }
+
+  .t-label {
+    @apply absolute -top-3 left-3 bg-light dark:bg-dark dark:text-light px-2;
   }
 }
