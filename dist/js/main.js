@@ -25,9 +25,9 @@
   };
 
   // localhost
-  // const baseUrl = "http://127.0.0.1:5500/";
+  const baseUrl = "http://127.0.0.1:5500/";
   // gihtub pages
-  const baseUrl = "https://andikaps.github.io/";
+  // const baseUrl = "https://andikaps.github.io/";
 
   function $(el) {
     return document.querySelector(el);
